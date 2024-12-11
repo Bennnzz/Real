@@ -18,6 +18,10 @@ body {
     margin-bottom: 20px;
 }
 
+.button-container {
+    position: relative;
+}
+
 .main-button {
     background-color: #FFB6C1; /* Pastel pink */
     border: none;
@@ -28,6 +32,8 @@ body {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
+    position: relative;
+    z-index: 1; /* Ensure button is above circles */
 }
 
 .main-button:hover {
@@ -35,7 +41,10 @@ body {
 }
 
 .circles-container {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none; /* Initially hidden */
 }
 
@@ -47,12 +56,12 @@ body {
     transition: all 0.5s ease;
 }
 
-.circle1 { width: 50px; height: 50px; }
-.circle2 { width: 60px; height: 60px; }
-.circle3 { width: 70px; height: 70px; }
-.circle4 { width: 80px; height: 80px; }
+.circle1 { width: 30px; height: 30px; }
+.circle2 { width: 30px; height: 30px; }
+.circle3 { width: 30px; height: 30px; }
+.circle4 { width: 30px; height: 30px; }
 
 .circle1 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.circle2 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(80px, 0); }
-.circle3 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0, 80px); }
-.circle4 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-80px, 0); }
+.circle2 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(40px, 0); }
+.circle3 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0, 40px); }
+.circle4 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-40px, 0); }
