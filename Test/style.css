@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF9C4; /* Pastel yellow */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    color: #FFB6C1; /* Pastel pink */
+    margin-bottom: 20px;
+}
+
+.main-button {
+    background-color: #FFB6C1; /* Pastel pink */
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-button:hover {
+    background-color: #FF69B4; /* A bit darker pink on hover */
+}
+
+.circles-container {
+    position: relative;
+    display: none; /* Initially hidden */
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFB6C1; /* Pastel pink */
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.circle1 { width: 50px; height: 50px; }
+.circle2 { width: 60px; height: 60px; }
+.circle3 { width: 70px; height: 70px; }
+.circle4 { width: 80px; height: 80px; }
+
+.circle1 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.circle2 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(80px, 0); }
+.circle3 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0, 80px); }
+.circle4 { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-80px, 0); }
